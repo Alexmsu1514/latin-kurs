@@ -11,10 +11,10 @@
 <style>
 /* Layout idea: one tall sky-blue poster that scrolls. Huge Unbounded headline, ticker of real company and bloc names, a two-way switch for Economics / Management. */
 :root{
-  --sky:#79C6F7;
-  --sky-deep:#1C8FE0;
-  --ink:#0A1F3B;
-  --paper:#F3F9FF;
+  --sky:#22B26A;
+  --sky-deep:#0B7A3E;
+  --ink:#0B2A1D;
+  --paper:#F2FAF5;
   --sun:#FFD43B;
   --display:'Unbounded','Arial Black',sans-serif;
   --body:'Golos Text','Segoe UI',Arial,sans-serif;
@@ -70,7 +70,7 @@ a{color:inherit}
 .m h3.sec{color:var(--sky)}
 .topics{display:grid;gap:12px;list-style:none}
 .topics li{padding:16px 18px;border-radius:16px;background:#fff;border:2px solid var(--ink)}
-.m .topics li{background:#112B4F;border-color:#2A4A78}
+.m .topics li{background:#123B29;border-color:#2E6B4B}
 .topics b{display:block;font-family:var(--display);font-size:16px;font-weight:600;margin-bottom:4px;line-height:1.2}
 .topics span{font-size:16px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -80,7 +80,7 @@ a{color:inherit}
 
 .points{display:flex;height:46px;border-radius:12px;overflow:hidden;border:2px solid currentColor;font-variant-numeric:tabular-nums;font-weight:700;font-size:14px}
 .points div{display:flex;align-items:center;justify-content:center;color:var(--ink)}
-.points .a{flex:30;background:#BFE3FB}.points .b{flex:20;background:var(--sun)}.points .c{flex:15;background:#8FD0F8}.points .d{flex:25;background:#5BB8F2}.points .z{flex:60;background:var(--sky-deep);color:#fff}
+.points .a{flex:30;background:#CDEFD9}.points .b{flex:20;background:var(--sun)}.points .c{flex:15;background:#9BDDB5}.points .d{flex:25;background:#5CC789}.points .z{flex:60;background:var(--sky-deep);color:#fff}
 .legend{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:12px;font-size:15px;font-variant-numeric:tabular-nums}
 .legend b{font-weight:700}
 .note{margin-top:12px;font-size:15px;opacity:.85}
@@ -109,7 +109,7 @@ a{color:inherit}
 footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
 
 .about{background:#fff;border:2px solid var(--ink);border-left:10px solid var(--sun);border-radius:16px;padding:18px 18px 16px;margin-bottom:26px}
-.m .about{background:#112B4F;border-color:#2A4A78;border-left-color:var(--sun)}
+.m .about{background:#123B29;border-color:#2E6B4B;border-left-color:var(--sun)}
 .about h3{font-family:var(--display);font-size:15px;font-weight:800;margin-bottom:8px;letter-spacing:.02em}
 .about p{font-size:17px;margin-bottom:10px}
 .about p:last-child{margin-bottom:0}
@@ -120,7 +120,7 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
 .why li::before{content:"";position:absolute;left:16px;top:18px;width:18px;height:18px;border-radius:5px;background:var(--ink)}
 .why li::after{content:"";position:absolute;left:21px;top:21px;width:5px;height:9px;border:solid var(--sun);border-width:0 3px 3px 0;transform:rotate(45deg)}
 .why b{font-family:var(--display);font-weight:600;font-size:15px;display:block;margin-bottom:2px;line-height:1.25}
-.m .why li{background:#112B4F;color:#fff;border:1px solid #2A4A78}
+.m .why li{background:#123B29;color:#fff;border:1px solid #2E6B4B}
 .m .why li::before{background:var(--sun)}
 .m .why li::after{border-color:var(--ink)}
 
@@ -136,13 +136,21 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
 .roles{list-style:none;display:grid;gap:3px;margin:2px 0 10px}
 .roles li{font-size:16px;font-weight:600;padding-left:16px;position:relative}
 .roles li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:2px;background:var(--sky-deep)}
+.flag{display:flex;height:8px}
+.flag i{flex:1}
+.flag i:nth-child(1){background:#0E8A4B}.flag i:nth-child(2){background:#FFD43B}.flag i:nth-child(3){background:#1B5FAA}.flag i:nth-child(4){background:#D7263D}
+.person .hl{display:block;margin:2px 0 8px;font-weight:600;padding:8px 10px;border-radius:10px;background:rgba(255,212,59,.45)}
+.cname{font-family:var(--display);font-weight:800;font-size:clamp(34px,10vw,72px);line-height:1;margin-top:16px;color:var(--ink)}
+.hero .cname+h1{margin-top:18px;font-size:clamp(24px,6.4vw,42px);line-height:1.12}
 </style>
 </head>
 <body>
 
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Латинская Америка · спецкурс по выбору · январь-май</span>
+    <span class="eyebrow">Спецкурс по выбору · февраль-май</span>
+    <div class="cname">Латинская Америка</div>
     <h1>Богатый регион, который сто лет <em>не мог разбогатеть.</em></h1>
     <p>Почему так вышло и что с этим делали: реформы, кризисы, торговые блоки и бизнес. Разбираем на курсе по Латинской Америке.</p>
     <p class="qh">Вопросы, которые будем решать:</p>
@@ -218,7 +226,7 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
         <li><b>Не только лекции</b>Деловые игры и дискуссии дают 50 баллов из 150. Говорить придётся много.</li>
         <li><b>Презентация, а не реферат</b>Мини-группы до 4 человек и 3-5 слайдов с источниками.</li>
         <li><b>Прозрачные правила</b>90 баллов из 150 набираются до зачёта, список вопросов к зачёту есть в программе.</li>
-        <li><b>Преподают авторы</b>Кулаков М.В. соавтор учебников по международной экономике и экономическому развитию.</li>
+        <li><b>Преподают те, кто знает регион изнутри</b>Кулаков М.В. восемь лет провёл в Латинской Америке. Марков А.Р. около двадцати лет проработал во Всемирном банке и не понаслышке знает проекты развития.</li>
       </ul>
 
       <h3 class="sec">Как играем</h3>
@@ -275,6 +283,7 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
 
       <h3 class="sec">Почему стоит выбрать именно этот курс</h3>
       <ul class="why">
+        <li><b>Преподаватели из практики</b>Кулаков М.В. восемь лет провёл в Латинской Америке и знает регион изнутри. Марков А.Р. около двадцати лет проработал во Всемирном банке и не понаслышке знает проекты развития.</li>
         <li><b>Реальные компании</b>Бразильские Embraer (самолёты), Nubank (цифровой банк), Petrobras и Pemex (нефть). Не абстрактные модели, а решения, которые принимали люди.</li>
         <li><b>Работа с настоящими данными</b>Базы проектов Всемирного банка и Межамериканского банка развития плюс статистика региона.</li>
         <li><b>Правила торговых блоков</b>МЕРКОСУР, USMCA, Тихоокеанский альянс: как они влияют на цепочки поставок и где обойти риски.</li>
@@ -317,7 +326,7 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
             <li>Заслуженный профессор МГУ</li>
             <li>Заведующий Лабораторией по изучению социально-экономических проблем развивающихся стран</li>
           </ul>
-          <span>Соавтор учебников «Международная экономика» и «Экономическое развитие. Теория и практика».</span></div>
+          <span class="hl">Восемь лет провёл в Латинской Америке и знает регион изнутри.</span><span>Соавтор учебников «Международная экономика» и «Экономическое развитие. Теория и практика».</span></div>
         <div class="person"><b>Швандар К.В.</b>
           <ul class="roles">
             <li>Доктор экономических наук</li>
@@ -329,7 +338,8 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
             <li>Доцент, кандидат экономических наук</li>
             <li>Советник декана</li>
             <li>Член Совета по развитию ЭФ МГУ</li>
-          </ul></div>
+          </ul>
+          <span class="hl">Около двадцати лет проработал во Всемирном банке и не понаслышке знает проекты развития.</span></div>
       </div>
     </div>
   </section>
@@ -339,7 +349,7 @@ footer{padding:18px 0 28px;font-size:13px;opacity:.7;text-align:center}
   <div class="wrap">
     <h2>Выбери курс, который реально пригодится</h2>
     <p>Запись на спецкурсы идёт в ноябре. Точную дату сообщим дополнительно: следи за доской объявлений и сообщениями кафедры.</p>
-    <div class="when">Запись: <i>ноябрь</i> · Занятия: <i>январь-май</i></div>
+    <div class="when">Запись: <i>ноябрь</i> · Занятия: <i>февраль-май</i></div>
   </div>
 </section>
 
